@@ -1,0 +1,11 @@
+@use "../styles/variables";
+
+.header {
+  color: variables.$eggshell;
+  font-size: 64px;
+  margin: 0;
+}
+.text {
+  color: variables.$off-yellow;
+  margin: 0;
+}
