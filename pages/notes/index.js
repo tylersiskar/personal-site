@@ -9,9 +9,10 @@ const API_SPACE_ID = process.env.API_SPACE_ID;
 const API_TOKEN = process.env.API_TOKEN;
 
 export async function getStaticProps() {
-  const res = await fetch(
+  let url = new URL(
     `${API_BASE_URL}/spaces/${API_SPACE_ID}/environments/master/entries?access_token=${API_TOKEN}`
   );
+  const res = await fetch(url);
   const posts = await res.json();
   return {
     props: {
