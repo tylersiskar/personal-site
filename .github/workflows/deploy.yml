@@ -25,6 +25,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+        env:
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          API_SPACE_ID: ${{ secrets.API_SPACE_ID }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
