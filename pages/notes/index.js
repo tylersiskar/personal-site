@@ -24,13 +24,12 @@ const Notes = ({ posts }) => {
 
   useEffect(() => {
     let devNotes = posts.filter((post) => post.fields.hasOwnProperty("date"));
-    console.log(posts, devNotes);
     setNotes(devNotes);
   }, [posts]);
   return (
     <Layout>
       <Link href="/">
-        <a className={styles.link}> Back home now </a>
+        <a className={styles.link}> Back to home </a>
       </Link>
       {notes?.map((note, i) => {
         return (
