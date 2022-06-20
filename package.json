@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build && next export"
   },
   "author": "Tyler Siskar",
   "license": "ISC",
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

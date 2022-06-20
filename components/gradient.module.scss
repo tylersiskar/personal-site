@@ -1,13 +1,4 @@
 @use "../styles/variables";
-.container {
-  width: 100%;
-  background-color: variables.$background-color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  box-sizing: border-box;
-}
 
 .gradient {
   --size: 70vw;
