@@ -16,6 +16,10 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     environment: Deployment
+    env:
+      key1: ${{ secrets.API_BASE_URL }}
+      key2: ${{ secrets.API_SPACE_ID }}
+      key3: ${{ secrets.API_TOKEN }}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -27,9 +31,9 @@ jobs:
         with:
           node-version: 12
         env:
-          API_BASE_URL: ${{ secrets.API_BASE_URL }}
-          API_SPACE_ID: ${{ secrets.API_SPACE_ID }}
-          API_TOKEN: ${{ secrets.API_TOKEN }}
+          API_BASE_URL: ${{ env.key1 }}
+          API_SPACE_ID: ${{ env.key2 }}
+          API_TOKEN: ${{ env.key3 }}
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
