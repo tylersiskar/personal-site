@@ -24,6 +24,7 @@ const Notes = ({ posts }) => {
   const [notes, setNotes] = useState(posts);
 
   useEffect(() => {
+    /** This is just to ignore the content from tcsiskar.com */
     let devNotes = posts.filter((post) => post.fields.hasOwnProperty("date"));
     setNotes(devNotes);
   }, [posts]);
