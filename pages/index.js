@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <GradientLayout>
       <div className={styles.textWrapper}>
-        <h1 className={styles.header}>Welcome.</h1>
+        <h1 className={styles.header}>Welcome to tylersiskar dot com.</h1>
         <h3 className={styles.text}>
           Thanks for visiting. Tyler is currently developing this site right
           now. If you're interested in seeing his notes. Go here...
