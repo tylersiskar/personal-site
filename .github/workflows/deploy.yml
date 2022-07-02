@@ -32,7 +32,3 @@ jobs:
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
-        with:
-          API_BASE_URL: ${{ secrets.API_BASE_URL }}
-          API_SPACE_ID: ${{ secrets.API_SPACE_ID }}
-          API_TOKEN: ${{ secrets.API_TOKEN }}
